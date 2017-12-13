@@ -1,2 +1,9 @@
 language: node_js
 node_js: node
+deploy:
+  provider: heroku
+  api_key:
+    secure: D76G4IkP1rBPdxSrJyuWbUUiVzRRUK6V0KAJ9VaOqmcde4Nz2LnquSHm2Gz6XGvFoxHRcxl3O4liBINF8K1JYMsZ62Yks6qjWVewa27pC52j787xGSRhJFrkh//MWjwaTRX4VTq7FabBE1S6fURGMSrXZrBQzZ2rellLEPWIuRXWUA3OF8hUgn80R9hJFi/DwnfrjhO/QtMdSwWt3+N83Is9Wzro6wBywd+PnGS/CYY6CRsJ2ZzS4rSd+l9N+z+YM/h9+j93HOCjwOV9O0V/5GIs1jLIt1o1P5ttufBEgI1pTcrGBH1ZjV+fpduIOXVwzYBFwpnw0rrW8b3Q3FkoFz3dsYB7ATyBWoRB5kx6z6Ut0kBIJ2xD4oVuNmfy577Uzy2YVpE3rSzxlxv5xGWWtry1rnlh3vXjn66/UDVulkc7TlhP7Or33I49LxSVZ3Xp43whP7O6y6I+YTKsNkekbScC52RYQUCj+ow5kSX3UjiWa9bBVK/FdcmuPROEGUofx4936sK8OSvFBaI1Gb/N/xPwuGhLKZeYG4+/0Q23CvgeIAAwOlLPVvecuj3oYuxIBmaMYu1Gjw7GCTFMvF8ix39ldh0IcnVJ3F5HGc277X7DokhSUgiK2DuWJR7b0SVZ/TyQzkXLn8BWrG7YZEDDPpCliCFbmK2ex+kpF4ei+as=
+  app: sheltered-taiga-28666
+  on:
+    repo: cactusnate22/node-shopping-list-integration-tests
