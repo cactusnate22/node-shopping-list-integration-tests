@@ -1,6 +1,8 @@
 Shopping list v5
 ================
 
+[![Build Status](https://travis-ci.org/cactusnate22/node-shopping-list-integration-tests.svg?branch=master)](https://travis-ci.org/cactusnate22/node-shopping-list-integration-tests)
+
 https://github.com/Thinkful-Ed/node-shopping-list-v5
 
 * Serves client that:
