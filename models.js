@@ -18,7 +18,6 @@ function StorageException(message) {
 
 const ShoppingList = {
   create: function(name, checked) {
-    console.log('Creating new shopping list item');
     const item = {
       name: name,
       id: uuid.v4(),
@@ -28,15 +27,12 @@ const ShoppingList = {
     return item;
   },
   get: function() {
-    console.log('Retrieving shopping list items');
     return Object.keys(this.items).map(key => this.items[key]);
   },
   delete: function(id) {
-    console.log(`Deleting shopping list item \`${id}\``);
     delete this.items[id];
   },
   update: function(updatedItem) {
-    console.log(`Deleting shopping list item \`${updatedItem.id}\``);
     const {id} = updatedItem;
     if (!(id in this.items)) {
       throw StorageException(
@@ -55,7 +51,6 @@ function createShoppingList() {
 
 const Recipes = {
   create: function(name, ingredients) {
-    console.log('Creating a new recipe');
     const item = {
       name: name,
       id: uuid.v4(),
@@ -65,15 +60,12 @@ const Recipes = {
     return item;
   },
   get: function() {
-    console.log('Retreiving recipes');
     return Object.keys(this.items).map(key => this.items[key]);
   },
   delete: function(itemId) {
-    console.log(`Deleting recipe with id \`${itemId}\``);
     delete this.items[itemId];
   },
   update: function(updatedItem) {
-    console.log(`Updating recipe with id \`${updatedItem.id}\``);
     const {id} = updatedItem;
     if (!(id in this.items)) {
       throw StorageException(

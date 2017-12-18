@@ -34,9 +34,7 @@ var SHOPPING_LIST_URL = serverBase + 'shopping-list';
 
 
 function getAndDisplayRecipes() {
-  console.log('Retrieving recipes')
   $.getJSON(RECIPES_URL, function(recipes) {
-    console.log('Rendering recipes');
     var recipesElement = recipes.map(function(recipe) {
       var element = $(recipeTemplate);
       element.attr('id', recipe.id);
@@ -52,9 +50,7 @@ function getAndDisplayRecipes() {
 }
 
 function getAndDisplayShoppingList() {
-  console.log('Retrieving shopping list');
   $.getJSON(SHOPPING_LIST_URL, function(items) {
-    console.log('Rendering shopping list');
     var itemElements = items.map(function(item) {
       var element = $(shoppingItemTemplate);
       element.attr('id', item.id);
@@ -71,7 +67,6 @@ function getAndDisplayShoppingList() {
 }
 
 function addRecipe(recipe) {
-  console.log('Adding recipe: ' + recipe);
   $.ajax({
     method: 'POST',
     url: RECIPES_URL,
@@ -85,7 +80,6 @@ function addRecipe(recipe) {
 }
 
 function addShoppingItem(item) {
-  console.log('Adding shopping item: ' + item);
   $.ajax({
     method: 'POST',
     url: SHOPPING_LIST_URL,
@@ -99,7 +93,6 @@ function addShoppingItem(item) {
 }
 
 function deleteRecipe(recipeId) {
-  console.log('Deleting recipe `' + recipeId + '`');
   $.ajax({
     url: RECIPES_URL + '/' + recipeId,
     method: 'DELETE',
@@ -108,7 +101,6 @@ function deleteRecipe(recipeId) {
 }
 
 function deleteShoppingItem(itemId) {
-  console.log('Deleting shopping item `' + itemId + '`');
   $.ajax({
     url: SHOPPING_LIST_URL + '/' + itemId,
     method: 'DELETE',
@@ -117,7 +109,6 @@ function deleteShoppingItem(itemId) {
 }
 
 function updateRecipe(recipe) {
-  console.log('Updating recipe `' + recipe.id + '`');
   $.ajax({
     url: RECIPES_URL + '/' + recipe.id,
     method: 'PUT',
@@ -129,7 +120,6 @@ function updateRecipe(recipe) {
 }
 
 function updateShoppingListitem(item) {
-  console.log('Updating shopping list item `' + item.id + '`');
   $.ajax({
     url: SHOPPING_LIST_URL + '/' + item.id,
     method: 'PUT',
